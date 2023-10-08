@@ -1,25 +1,47 @@
 {
-  "name": "montrell-peavy",
-  "version": "1.0.0",
-  "description": "Hello World!",
-  "main": "index.js",
+  "name": "client1",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.5.1",
+    "cors": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r esm server.js",
-    "server": "nodemon -r esm server.js"
+    "start": "react-scripts start",
+    "server": "nodemon -r esm server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config": "^3.3.9",
-    "esm": "^3.2.25",
-    "express": "^4.18.2",
-    "express-validator": "^7.0.1",
-    "mongoose": "^6.7.3"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/montrell-peavy-matc/itdev161-assignments-v2.git"
   },
-  "devDependencies": {
-    "concurrently": "^8.2.1",
-    "nodemon": "^3.0.1"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
